@@ -20,3 +20,10 @@ for (let i = 0; i < btnsOpenModal.length; i++)
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+//Implementing if key press in keyborad then do these actions 
+document.addEventListener('keydown', function (event) {
+   if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+   }
+})
